@@ -1,0 +1,181 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho e Menu */
+.topo {
+    background-color: #1e293b;
+    border-bottom: 2px solid #8b5cf6;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 15px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #8b5cf6;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #38bdf8;
+}
+
+/* Banner Principal */
+.banner {
+    background: linear-gradient(135deg, #311068 0%, #0f172a 50%, #0c4a6e 100%);
+    padding: 80px 0;
+    text-align: center;
+    border-bottom: 1px solid #334155;
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.btn-destaque {
+    display: inline-block;
+    background-color: #8b5cf6;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-destaque:hover {
+    background-color: #7c3aed;
+    transform: translateY(-2px);
+}
+
+/* Seções e Cards */
+.secao {
+    padding: 60px 0 20px 0;
+}
+
+.titulo-secao {
+    font-size: 1.8rem;
+    color: #38bdf8;
+    margin-bottom: 25px;
+    border-left: 4px solid #8b5cf6;
+    padding-left: 12px;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+}
+
+.card h3 {
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+.card p {
+    color: #94a3b8;
+    font-size: 0.98rem;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #1e293b;
+    border-top: 1px solid #334155;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+.rodape p {
+    margin-bottom: 6px;
+}
+
+/* Ajuste para telas pequenas (Celular) */
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .banner h2 {
+        font-size: 1.9rem;
+    }
+}
